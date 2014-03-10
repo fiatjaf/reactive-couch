@@ -1,0 +1,6 @@
+body > div {
+  margin: 10px;
+  border: 4px dotted red;
+  padding: 10px;
+  float: left;
+}

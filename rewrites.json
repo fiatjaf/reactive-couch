@@ -1,0 +1,21 @@
+[
+    {
+      "to": "_show/displayThing/:_id",
+      "from": "thing/:_id"
+    }, {
+      "to": "_list/standardListOfSomeKindOfThing/someKindOfThing",
+      "from": "things"
+    }, {
+      "to": "_show/index",
+      "from": ""
+    }, {
+      "to": "",
+      "from": "_ddoc"
+    }, {
+      "to": "*",
+      "from": "_ddoc/*"
+    }, {
+      "to": "*",
+      "from": "/*"
+    }
+]
