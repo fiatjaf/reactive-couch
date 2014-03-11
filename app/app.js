@@ -12,8 +12,7 @@ curl.config({
 
 curl(['eventemitter'], function(EventEmitter) {
   window.ee = new EventEmitter();
-  return curl(['lib/react', 'components/Operacoes', 'components/Despesas'], function(React, Login, SearchResults, Bicho) {
-    React.renderComponent(Operacoes(window.data.operacoes), document.getElementById('operacoes'));
-    return React.renderComponent(Despesas(window.data.despesas), document.getElementById('despesas'));
+  return curl(['lib/react', 'components/SomeKindResultsDisplayComponent'], function(React, SomeFormOfDisplayOfSomeKindOfThing) {
+    return React.renderComponent(SomeFormOfDisplayOfSomeKindOfThing(window.data), document.getElementById('someKindOfThingList'));
   });
 });

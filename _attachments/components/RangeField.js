@@ -8,7 +8,7 @@ factory = function(React) {
   RangeField = React.createClass({
     displayName: 'RangeField',
     handleChange: function(e) {
-      return this.props.reportInputChange(e);
+      return this.props.onChange(e);
     },
     componentDidMount: function() {
       var elem;

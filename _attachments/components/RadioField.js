@@ -9,7 +9,7 @@ factory = function(React) {
     displayName: 'RadioField',
     handleChange: function(e) {
       if (e.target.checked) {
-        return this.props.reportValue(this.props.name, e.target.value);
+        return this.props.onChange(this.props.name, e.target.value);
       }
     },
     render: function() {

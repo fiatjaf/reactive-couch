@@ -27,6 +27,7 @@ factory = (request, _, React, History, today, require) ->
       # function, this session extracts then from an object and build
       # a query string, which then is passed to the History module, a simple
       # wrapper around browsers window.history.
+      viewparams.include_docs = true
       query = _.pairs(viewparams).map((pair) -> pair.join '=').join '&'
       History.to "/someKindOfThing?#{query}"
 
@@ -53,13 +54,23 @@ factory = (request, _, React, History, today, require) ->
 
   Results = React.createClass
     displayName: 'Results'
+
+    showItem: (thingid, e) ->
+      # this will render a click on one of the elements of the list
+      # the click will cause a signal to be emitted by a global event
+      # emitter that will be listened by the Thing component, which
+      # will then render itself.
+      ee.emit 'showThing', thingid
+
     render: ->
       (table {},
-        (h1 {}, 'items of some kind')
+        (h1 {}, 'things of some kind')
         (ul {},
-          (li {ref: item._id}
-          , item.value
-          ) for item in @props.results
+          (li
+            ref: thing._id
+            onClick: @showItem.bind @, thing._id
+          , thing.value
+          ) for thing in @props.results
         )
       )
 

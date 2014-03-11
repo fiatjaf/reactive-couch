@@ -6,10 +6,11 @@
     day = date.getDate()
     month = '0' + month if "#{month}".length == 1
     day = '0' + day if "#{day}".length == 1
-    return
+    return {
       year: year
       month: month
       day: day
+    }
   )()
 
   if not doc
