@@ -11,8 +11,8 @@ curl ['eventemitter'], (EventEmitter) ->
   window.ee = new EventEmitter()
   curl ['lib/react',
         'components/SomeKindResultsDisplayComponent'],
-  (React, SomeFormOfDisplayOfSomeKindOfThing) ->
-  
-    React.renderComponent SomeFormOfDisplayOfSomeKindOfThing(window.data)
+  (React, ListComponent) ->
+
+    React.renderComponent ListComponent(window.data)
     , document.getElementById 'someKindOfThingList'
   

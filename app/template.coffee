@@ -1,5 +1,5 @@
 React = require 'lib/react'
-SomeFormOfDisplayOfSomeKindOfThing = require 'components/SomeFormOfDisplayOfSomeKindOfThing'
+ListComponent = require 'components/ListComponent'
 
 module.exports = (browsercode, data) ->
   """
@@ -12,7 +12,7 @@ module.exports = (browsercode, data) ->
   <body>
 
     <div id="someKindOfThingList">
-      #{React.renderComponentToString SomeFormOfDisplayOfSomeKindOfThing(data)}
+      #{React.renderComponentToString ListComponent(data)}
     </div>
 
   </body>
