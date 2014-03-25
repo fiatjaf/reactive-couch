@@ -7,12 +7,12 @@ curl.config
     'eventemitter': '/lib/EventEmitter.js'
     'history': '/lib/history.js'
 
-curl ['eventemitter'], (EventEmitter) ->
+curl ['eventemitter', 'app/dispatcher'], (EventEmitter, Dispatcher) ->
   window.ee = new EventEmitter()
   curl ['lib/react',
         'components/SomeKindResultsDisplayComponent'],
   (React, ListComponent) ->
-
+    window.app.dispatcher = new Dispatcher()
     React.renderComponent ListComponent(window.data)
     , document.getElementById 'someKindOfThingList'
   
