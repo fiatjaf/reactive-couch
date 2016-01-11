@@ -1,6 +1,10 @@
-#### Crawlable, component and events based, easy to mantain CouchApps using Facebook's React.js to render the same HTML inside CouchDB's \_list and \_show and then easily update or re-render them at client side using the same libraries, the same components.
-
 # Reactive Couch
+
+_Crawlable, component and events based, easy to mantain CouchApps using Facebook's React.js to render the same HTML inside CouchDB's \_list and \_show and then easily update or re-render them at client side using the same libraries, the same components._
+
+Attention: this is an old project, so it uses an old React version, but since it is only an example of how to structure your Couchapp with React, then it still has value as that. The source code is commented everywhere and there are various README.md pages explaining how and why things work.
+
+---
 
 Reactive Couch is a bunch of patterns for declaring [React](http://facebook.github.io/react/) components, rendering them inside \_list and \_show functions and binding the components with javascript them to the rendered HTML elements at the rendered app/website.
 
